@@ -3,11 +3,12 @@ session_start();
 if(($_SESSION['Correo1'])!=""){
 /*Consulta de datos de la base de la tabla para colocar en tabla de informacion del alumno*/
 $Usuario=$_SESSION['Correo1'];
-$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");
+$Conexion=mysqli_connect("localhost","root","","BDPIntegrador");
+/*$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");*/
 $resultado=mysqli_query($Conexion,"SELECT * FROM tutores WHERE  Usuario='$Usuario'");
 while($consulta=mysqli_fetch_array($resultado)){
   $Nombre=$consulta['Nombre'];
- 
+  $pro="SELECT * FROM tacceso_lider where Estatus = 'Validado'";
 
 }
 
@@ -299,7 +300,7 @@ border-top:grey 0.2px solid;
 
 .Cuadro_Registrar2{
 	background-color:white;
-	height:400px;
+	height:600px;
 	width:98%;
 }
 
@@ -439,18 +440,46 @@ border-top:grey 0.2px solid;
 
 <input class="BotonSubir" style="float:left;font-family:calibri" type="submit" name="Cargar_Datos" value="Cargar datos">
 </form>
-
- 
-
+</div>
 
 
 
+<div class="Cuadro_Registrar2">
+<h5 style="font-family: calibri;">Proyectos</h5> 
+  <form method="post" action="Administrar_Usuarios.php">
+    <table class="Tabla">
+    <tr>
+    <th style="text-align: center;">ID</th>  
+    <th style="text-align: center;">Nombre de proyecto</th>          <!--Codigo de los titulos de columnas-->
+    <th style="text-align: center;">Lider</th>
+    <th style="text-align: center;">Matricula</th>
+    <th style="text-align: center;"></th>
+    </tr>
+
+    <?php 
 
 
+    
+    $resultado2=mysqli_query($Conexion,$pro);
+    while ($row=mysqli_fetch_assoc($resultado2)) { ?>
 
+    <tr> 
+      <td> <?php echo $row["ID"];?></td>  
+      <td> <?php echo $row["Nombre_Proyecto"];?></td>
+      <td> <?php echo $row["Nombre"];?> </td>
+      <td> <?php echo $row["Matricula"];?> </td>
+      <td> <a href="Administrar_Lideres.php?idl=<?php echo $row["ID"];?>">Ver integrantes</a></td>
+    </tr>
+    <?php } ?> 
+
+    </table> 
+    
+    </form>
+</div>
 
 </div>
-</div>
+
+
 </div>                   
 
 
