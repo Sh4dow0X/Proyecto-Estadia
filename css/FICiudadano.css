@@ -1,0 +1,128 @@
+/*
+En esta sección solo se modifican los estilos del header, botones de usuario
+Autor: Francisco Javier López Salazar
+*/
+body{
+  overflow-x: hidden; 
+}
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+html, body, div, iframe { 
+  margin:0; 
+  padding:0; 
+  height:100%; 
+}
+iframe { display:block; width:100%; border:none; }
+.col-md-4{
+  position: relative;
+  bottom: 90%;
+}
+#titulo{
+  position: relative;
+  left: 32%;
+  top: 10%;
+  font-size: 150%;
+  width: auto;
+  height: auto;
+}
+a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+.num{
+  position: relative;
+  left: 1%;
+}
+#notify{/*NOTIFICACION DE TURNOS PENDIETES*/
+  position: relative;
+  left: 60%;
+  top: 20pt;
+  color: white;
+  padding-left: 0%;
+  font-size: smaller;
+  height: 30%;
+  width: 1%;
+  background: rgba(74, 88, 214, 0.952);
+}
+#numFiles{/*NOTIFICACION DE EXPEDIENTES ABIERTO*/
+  position: relative;
+  left: 65%;
+  top: 20pt;
+  color: white;
+  padding-left: 0%;
+  font-size: smaller;
+  height: 30%;
+  width: 1%;
+  background: rgba(74, 88, 214, 0.952);
+}
+#numAtencion{/*NOTIFICACION DE TIEMPO SIN ATENDER*/
+  position: relative;
+  left: 60%;
+  top: 20pt;
+  color: white;
+  padding-left: 0%;
+  font-size: smaller;
+  height: 30%;
+  width: 1%;
+  background: rgba(74, 88, 214, 0.952);
+}
+#encabezado{
+  position: relative;
+  
+}
+#header{
+  margin: auto;
+  position: relative;
+  right: 1.5%;
+  height: 50px;
+  width: 90%;
+}
+.dropdown-item{
+  font-size: small;
+  
+}
+.has-subnav{
+  position: relative;
+  bottom: 15%;
+}
+#FilaE{
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+#FilaE:hover{
+  background-color: #5284C8; /* blue */
+  color: white;
+}
+
+#btnInicio{
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+#btnInicio:hover{
+  background-color: #5284C8; /* blue */
+  color: white;
+}
+
+#Datos{
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+#Datos:hover{
+  background-color: #5284C8; /* blue */
+  color: white;
+}
+

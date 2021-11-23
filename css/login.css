@@ -1,0 +1,41 @@
+body{
+    background: none;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+}
+#contenido{
+    position: relative;
+    right: 120%;
+}
+#portada, img{
+    position: relative;
+    bottom: 220px;
+    left: 2.5%;
+    height: 190%;
+    width: 173%;
+}
+#subtitulo{
+    position: relative;
+    right: 15%;
+    text-align: center;
+    color: rgb(119, 93, 93);
+}
+input{
+    border-color: red;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    width: 100%;
+}

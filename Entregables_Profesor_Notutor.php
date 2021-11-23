@@ -906,8 +906,6 @@ function validarExt(){
   }
 }
 
-
-  
 </script>
 
 

@@ -3,8 +3,7 @@ session_start();
 
 if(($_SESSION['Correo1'])!=""){
 $Usuario=$_SESSION['Correo1'];
-$Conexion=mysqli_connect("localhost","root","","BDPIntegrador");
-/*$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");*/
+$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");
 $resultado=mysqli_query($Conexion,"SELECT * FROM maestros WHERE  Usuario='$Usuario'");
 
 
