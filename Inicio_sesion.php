@@ -6,7 +6,7 @@ if (isset($_POST['Ingresar'])) {
 if (strlen($_POST['Correoelectronico'])>=1 && strlen($_POST['Contraseña'])>=1 && isset($_POST['Opcion']) ){
 if ($_POST['Opcion']=='Alumno'){    
 
-
+$Conexion=mysqli_connect("localhost","root","","BDPIntegrador");
 $Correoelectronico=trim($_POST['Correoelectronico']);
 $Contraseña=trim($_POST['Contraseña']);
 //Cosultar  a la base de datos Alumno
@@ -17,7 +17,7 @@ $filas=mysqli_num_rows($resultado);
 
 $resultado2=mysqli_query($Conexion,"SELECT * FROM tacceso_integrantes WHERE  Correo='$Correoelectronico'");
  $consulta=mysqli_fetch_array($resultado2);
- $Conexion=mysqli_connect("localhost","root","","BDPIntegrador");
+
 
 
 
@@ -74,7 +74,7 @@ session_start();
 if ($_POST['Opcion']=='Maestro'){   
 $Usuario_tutor=trim($_POST['Correoelectronico']);
 $Contraseña=trim($_POST['Contraseña']);
-/*$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");*/
+/* $Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador"); */
 $Consulta="SELECT * FROM tutores WHERE  Clave='$Contraseña' and Usuario='$Usuario_tutor'";
 $resultado=mysqli_query($Conexion,$Consulta);
 $filas=mysqli_num_rows($resultado);
@@ -90,7 +90,7 @@ echo '</script>';
 
 } //llave que verifica si las los datos estan correctos
 else{
-$Usuario_notutor=trim($_POST['Correoelectronico']);
+	$Usuario_notutor=trim($_POST['Correoelectronico']);
 $Contraseña=trim($_POST['Contraseña']);
 /* $Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");*/
 $Consulta="SELECT * FROM maestros WHERE  Clave='$Contraseña' and Usuario='$Usuario_tutor'";
@@ -147,16 +147,3 @@ echo 'alert("Ocurrio un error");';
 echo 'window.location.href="Inicio.html";';
 echo '</script>';
 }
-
-
-
-
-
-
-
-
-
-?>
-
-          
-
