@@ -1,7 +1,7 @@
 <?php 
 $id= $_GET['idi'];
-$Conexion=mysqli_connect("localhost","root","","BDPIntegrador");
-/*$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");*/
+//$Conexion=mysqli_connect("localhost","root","","BDPIntegrador");
+$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");
 $int=mysqli_query($Conexion,"SELECT * FROM tacceso_integrantes where ID = '$id'");
 
 while($consulta=mysqli_fetch_array($int)){

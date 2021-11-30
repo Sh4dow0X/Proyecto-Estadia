@@ -5,8 +5,8 @@ if(($_SESSION['Correo1'])!=""){
 /*Consulta de datos de la base de la tabla para colocar en tabla de informacion del alumno*/
 $Correo=$_SESSION['Correo1'];
 
-$Conexion=mysqli_connect("localhost","root","","BDPIntegrador");
-/*$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");*/
+//$Conexion=mysqli_connect("localhost","root","","BDPIntegrador");
+$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");
 $resultado=mysqli_query($Conexion,"SELECT * FROM administrador WHERE  Usuario='$Correo'");
 
 

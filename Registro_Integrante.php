@@ -7,8 +7,8 @@
 
 	<?php
 
-	/* $Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");*/
-	$Conexion = mysqli_connect("localhost", "root", "", "BDPIntegrador");
+	$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");
+	//$Conexion = mysqli_connect("localhost", "root", "", "BDPIntegrador");
 
 	$matricula2 = "";
 	$Nombre2 = "";

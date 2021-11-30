@@ -4,10 +4,10 @@ session_start();
 if(($_SESSION['Correo1'])!=""){
 $Correo=$_SESSION['Correo1'];
 
-//$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDIntegrador");
+$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDIntegrador");
 
 /* $Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador"); */
-$Conexion=mysqli_connect("localhost","root","","BDPIntegrador");
+//$Conexion=mysqli_connect("localhost","root","","BDPIntegrador");
 $resultado=mysqli_query($Conexion,"SELECT * FROM tacceso_integrantes WHERE  Correo='$Correo'");
 
 $EstatusP=" ";
@@ -30,8 +30,8 @@ while($consulta=mysqli_fetch_array($resultado)){
 
 
 $resultado3=mysqli_query($Conexion,"SELECT * FROM carga WHERE Matricula='$Matricula2'");
-/* $Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");
- */
+$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");
+ 
 
 
 ////EXTRAR EL ESTATUS PARA VALIDAD EN QUE ESTATUS SE ENCUENTRA///////////////

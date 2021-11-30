@@ -10,14 +10,14 @@ if ($_POST['Opcion']=='Alumno'){
 $Correoelectronico=trim($_POST['Correoelectronico']);
 $Contraseña=trim($_POST['Contraseña']);
 //Cosultar  a la base de datos Alumno
-/* $Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador"); */
+$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador"); 
 $Consulta="SELECT * FROM tacceso_integrantes WHERE Contraseña='$Contraseña' and Correo='$Correoelectronico'";
 $resultado=mysqli_query($Conexion,$Consulta);
 $filas=mysqli_num_rows($resultado);
 
 $resultado2=mysqli_query($Conexion,"SELECT * FROM tacceso_integrantes WHERE  Correo='$Correoelectronico'");
  $consulta=mysqli_fetch_array($resultado2);
- $Conexion=mysqli_connect("localhost","root","","BDPIntegrador");
+ //$Conexion=mysqli_connect("localhost","root","","BDPIntegrador");
 
 
 
@@ -42,7 +42,7 @@ $_SESSION['Correo1']=$Correoelectronico;
 
 else{
 
-/* $Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");*/
+$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");
 $Consulta="SELECT * FROM tacceso_lider WHERE Contraseña='$Contraseña' and Correo='$Correoelectronico'";
 $resultado=mysqli_query($Conexion,$Consulta);
 $filas=mysqli_num_rows($resultado);
@@ -74,7 +74,7 @@ session_start();
 if ($_POST['Opcion']=='Maestro'){   
 $Usuario_tutor=trim($_POST['Correoelectronico']);
 $Contraseña=trim($_POST['Contraseña']);
-/*$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");*/
+$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");
 $Consulta="SELECT * FROM tutores WHERE  Clave='$Contraseña' and Usuario='$Usuario_tutor'";
 $resultado=mysqli_query($Conexion,$Consulta);
 $filas=mysqli_num_rows($resultado);
@@ -92,7 +92,7 @@ echo '</script>';
 else{
 $Usuario_notutor=trim($_POST['Correoelectronico']);
 $Contraseña=trim($_POST['Contraseña']);
-/* $Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");*/
+$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");
 $Consulta="SELECT * FROM maestros WHERE  Clave='$Contraseña' and Usuario='$Usuario_tutor'";
 $resultado=mysqli_query($Conexion,$Consulta);
 $filas=mysqli_num_rows($resultado);

@@ -1,6 +1,8 @@
 <?php 
 $Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador");
 //$Conexion=mysqli_connect("localhost","root","","registropi");
+//$Conexion=mysqli_connect("localhost","root","","BDPIntegrador");
+
 session_start();
 $Correo=$_SESSION['Correo1'];
 

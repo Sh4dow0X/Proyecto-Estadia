@@ -8,14 +8,14 @@ if (strlen($_POST['Correoelectronico'])>=1 && strlen($_POST['Contraseña'])>=1){
 $Correoelectronico=trim($_POST['Correoelectronico']);
 $Contraseña=trim($_POST['Contraseña']);
 //Cosultar  a la base de datos Alumno
-/* $Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador"); */
+$Conexion=mysqli_connect("localhost","jquintana","wS717714CU","BDPIntegrador"); 
 $Consulta="SELECT * FROM administrador WHERE Clave='$Contraseña' and Usuario='$Correoelectronico'";
 $resultado=mysqli_query($Conexion,$Consulta);
 $filas=mysqli_num_rows($resultado);
 
 $resultado2=mysqli_query($Conexion,"SELECT * FROM administrador WHERE  Usuario='$Correoelectronico'");
  $consulta=mysqli_fetch_array($resultado2);
- $Conexion=mysqli_connect("localhost","root","","BDPIntegrador");
+ //$Conexion=mysqli_connect("localhost","root","","BDPIntegrador");
 
 if($filas>0){
 
